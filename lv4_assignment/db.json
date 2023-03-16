@@ -1,16 +1,20 @@
 {
   "logs": [
     {
-      "id": 2,
-      "title": "Bulgarian Squat"
-    },
-    {
-      "title": "Split Squat",
+      "title": "ㅁㄴㅇㄴㅁㅇ",
       "id": 4
     },
     {
       "title": "Lunge",
       "id": 5
+    },
+    {
+      "title": "ㅁㄴㅇㅁㄴㅇㅁㄴㄹ",
+      "id": 6
+    },
+    {
+      "title": "ㅁㄴㅇㄴㅁㅇ",
+      "id": 7
     }
   ]
 }

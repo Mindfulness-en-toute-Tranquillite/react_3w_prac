@@ -18,7 +18,7 @@ console.log('list : ', list)
 
 // 상세보기 클릭하면 페이지 이동
 const handleDetailPageLinkClick = (id) => {
-    navigate(`/${list.id}`);
+    navigate(`/${id}`);
 }
 // 삭제버튼 클릭 동작
 const handleDeleteLogClick = (id) => {
@@ -44,7 +44,7 @@ const handleDeleteLogClick = (id) => {
 
                     <div>
                         <button
-                        onClick={handleDetailPageLinkClick}
+                        onClick={()=>handleDetailPageLinkClick(list.id)}
                         >
                             상세보기
                         </button>

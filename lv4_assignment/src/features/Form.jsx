@@ -17,7 +17,7 @@ function Form() {
         e.preventDefault();
         // 추가하려는 log list를 newLog라는 객체로 새로 만듬
         const newLog = {
-            id: 0,
+            id: Math.floor(Math.random() * 1000), 
             title,
             content,
         };

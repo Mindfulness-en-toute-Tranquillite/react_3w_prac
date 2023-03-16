@@ -56,12 +56,11 @@ function Detail() {
   }
 
   return (
-    // <>
-    // <div>{logs.id}</div>
-
-    // <div>{logs.title}</div>
-    // <div>{logs.content}</div>
-    // </>
+    <>
+    {/* <div>{logs.id}</div>
+    <div>{logs.title}</div>
+    <div>{logs.content}</div> */}
+    
       <StWrapper>
       <StToHomeButtonWrapper>
       <button
@@ -124,7 +123,9 @@ function Detail() {
       </div>
         
       </StWrapper>
+    </>
   )
+  
 }
 
 export default Detail

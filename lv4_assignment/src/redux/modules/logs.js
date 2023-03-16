@@ -29,6 +29,7 @@ export const __addList = createAsyncThunk(
     (payload, thunkAPI) => {
         setTimeout(() => {
             thunkAPI.dispatch(addList(payload))
+            console.log('김동찬',payload)
         }, 1);
     }
 );
