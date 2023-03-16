@@ -8,6 +8,9 @@ function Form() {
     const dispatch =useDispatch();
     const [title, setTitle] = useState('')
     const [content,setContent] = useState('')
+    const [inputValue, setInputValue] = useState({
+        title: "",
+    })
     const logs = useSelector((state) => state.logs)
     // form 태그 내부에서 submit 실행된 경우 호출되는 함수
     const handleSubmitButtonClick = (e) => {
@@ -43,10 +46,12 @@ function Form() {
         <StWrapper>
             <StInputGroup>
                 <StInputLabel>
-                        제목
+                        운동
                     <StInput 
                     type="text"
-                    placeholder="제목을 입력하세요."
+                    placeholder="[날짜]운동부위를 입력하세요."
+                    minLength="1"
+                    required
                     value={title}
                     onChange={handleTItleChange}
                     />

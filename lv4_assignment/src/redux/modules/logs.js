@@ -38,7 +38,7 @@ export const __removeList = createAsyncThunk(
     (payload, thunkAPI) => {
         setTimeout(() => {
             thunkAPI.dispatch(removeList(payload))
-        }, 3000);
+        }, 1);
     }
 );
 

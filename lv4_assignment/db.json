@@ -1,19 +1,16 @@
 {
-    "logs": [
-        {
-        "id": 1,
-        "title": "react",
-        "content": "Redux"
-        },
-        {
-        "id": 1,
-        "title": "react",
-        "content": "Redux"
-        },
-        {
-        "id": 1,
-        "title": "react",
-        "content": "Redux"
-        }
-    ]
+  "logs": [
+    {
+      "id": 2,
+      "title": "Bulgarian Squat"
+    },
+    {
+      "title": "Split Squat",
+      "id": 4
+    },
+    {
+      "title": "Lunge",
+      "id": 5
+    }
+  ]
 }

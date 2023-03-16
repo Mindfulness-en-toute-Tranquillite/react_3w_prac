@@ -5,7 +5,7 @@ const Header= () => {
     return (
         <StContainer>
             <div>Home</div>
-            <div>개발일지</div>
+            <div>운동일지</div>
         </StContainer>
     )
 }

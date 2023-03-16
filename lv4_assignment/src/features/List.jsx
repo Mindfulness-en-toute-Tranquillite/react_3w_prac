@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { removeList } from '../redux/modules/logs'
 import { __removeList } from '../redux/modules/logs'
@@ -9,31 +9,37 @@ function List() {
 const logs = useSelector((state)=> state.logs)
 const navigate = useNavigate();
 const dispatch = useDispatch();
+const param = useParams();
+console.log('logs : ', logs)
+
+
+const list = logs.find((list) => logs.id === (param.id));
+console.log('list : ', list)
 
 // 상세보기 클릭하면 페이지 이동
-const handleDetailPageLinkClick = (logId) => {
-    navigate(`/${logId}`);
+const handleDetailPageLinkClick = (id) => {
+    navigate(`/${list.id}`);
 }
 // 삭제버튼 클릭 동작
-const handleDeleteLogClick = (logId) => {
-    dispatch(__removeList(logId));
+const handleDeleteLogClick = (id) => {
+    dispatch(__removeList(id));
 }
 
 
     return (
     <StListWrapper>
         <StListHeader>
-            개발일지 리스트
+            운동일지 리스트
         </StListHeader>
         
         <StLogListBoxContainer>
             {
-            logs.map((item) => {
+            logs.map((list) => {
                 return (
-                <StLogListBox key={item.id}>
+                <StLogListBox key={list.id}>
                     <div>
-                        <div>제목: {item.title}</div>
-                        <div>내용: {item.content}</div>
+                        <div>운동: {list.title}</div>
+                        <div>내용: {list.content}</div>
                     </div>
 
                     <div>
@@ -43,7 +49,7 @@ const handleDeleteLogClick = (logId) => {
                             상세보기
                         </button>
                         <button
-                        onClick={() => handleDeleteLogClick(item.id)}
+                        onClick={() => handleDeleteLogClick(list.id)}
                         >
                             삭제하기
                             </button>
